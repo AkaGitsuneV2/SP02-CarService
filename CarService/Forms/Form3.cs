@@ -42,6 +42,14 @@ namespace CarService.Forms
         }
         private void Form3_Load(object sender, EventArgs e)
         {
+            #region Аналог placeholder
+
+            label5.Text = "Поиск по ФИО";
+            label6.Text = "Поиск по Email";
+            label7.Text = "Поиск по Телефону";
+            
+            #endregion
+
             PreviousBtn.Enabled = false;
             NextBtn.Enabled = false;
 
@@ -49,11 +57,6 @@ namespace CarService.Forms
             dataGridView1.DataSource = DBConnection.dtClients;
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
-        
         private void PreviousBtn_Click(object sender, EventArgs e)
         {
             if (pageNumber != 0)
@@ -94,11 +97,53 @@ namespace CarService.Forms
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (comboBox1.SelectedValue.ToString() == "Все")
+            {
+                ClientsClass.GetFullTable();
+                dataGridView1.DataSource = DBConnection.dtClients; 
+            }
             recordsPerPage = Convert.ToInt32(comboBox1.SelectedItem.ToString());
             currentPage = 1;
             NextBtn.Enabled = true;
 
             UpdateDataGridView();
         }
+        #region
+        private void label5_Click(object sender, EventArgs e)
+        {
+            textBox1.Focus();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            textBox2.Focus();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            textBox3.Focus();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            label5.Visible = string.IsNullOrEmpty(textBox1.Text);
+
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            label6.Visible = string.IsNullOrEmpty(textBox2.Text);
+
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            label7.Visible = string.IsNullOrEmpty(textBox3.Text);
+
+
+        }
+        #endregion
     }
 }
