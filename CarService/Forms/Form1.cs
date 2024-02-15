@@ -40,5 +40,10 @@ namespace CarService
             this.Hide();
             f3.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

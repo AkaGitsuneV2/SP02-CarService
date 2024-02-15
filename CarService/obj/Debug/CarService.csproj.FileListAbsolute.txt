@@ -44,3 +44,5 @@ C:\Users\petre\source\repos\SP02-CarService\CarService\obj\Debug\CarService.cspr
 C:\Users\petre\source\repos\SP02-CarService\CarService\obj\Debug\CarService.exe
 C:\Users\petre\source\repos\SP02-CarService\CarService\obj\Debug\CarService.pdb
 C:\Users\petre\source\repos\SP02-CarService\CarService\obj\Debug\CarService.Forms.Form3.resources
+C:\Users\petre\source\repos\SP02-CarService\CarService\obj\Debug\CarService.Forms.Form4Insert.resources
+C:\Users\petre\source\repos\SP02-CarService\CarService\obj\Debug\CarService.Forms.Tag.resources

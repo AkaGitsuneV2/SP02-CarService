@@ -19,6 +19,8 @@ namespace CarService.Class
         static public MySqlDataReader reader;
 
         static public DataTable dtClients = new DataTable();
+        static public DataTable dtGender = new DataTable();
+        static public DataTable dtTag = new DataTable();
 
         /// <summary>
         /// Метод подключения к базе данных
